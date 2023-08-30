@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "nexai_backend": {
+      "main": "src/nexai_backend/main.mo",
+      "type": "motoko"
+    },
+    "nexai_frontend": {
+      "dependencies": [
+        "nexai_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/nexai_frontend/src/index.html"
+      },
+      "source": [
+        "src/nexai_frontend/assets",
+        "dist/nexai_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
