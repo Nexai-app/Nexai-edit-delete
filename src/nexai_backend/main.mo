@@ -125,7 +125,8 @@ shared ({caller}) actor class Nexai() = {
     CardHashMap.put(cardId, newCard);
     return (newCard);
     };
-
+    
+    // A delete function
     public shared func deleteQCard (cardId: Nat): async () {
     var x = CardHashMap.delete(cardId);
     return ();
